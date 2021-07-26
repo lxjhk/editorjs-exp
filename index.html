@@ -266,7 +266,8 @@
                 ]
             },
             onReady: function () {
-                saveButton.click();
+                window['editor'] = editor;
+                console.log(window['editor']);
             },
             onChange: function (api, block) {
                 console.log('something changed', block);
@@ -305,8 +306,7 @@
 
             readOnlyIndicator.textContent = readOnlyState ? 'On' : 'Off';
         });
-        window['editor'] = editor;
-        console.log(window['editor']);
+        
     </script>
 </body>
 
