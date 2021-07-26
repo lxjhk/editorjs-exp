@@ -10,6 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <style>
+       
     </style>
 </head>
 
@@ -76,7 +77,7 @@
              * Enable/Disable the read only mode
              */
             readOnly: false,
-
+            
             /**
              * Wrapper of Editor
              */
@@ -109,15 +110,7 @@
                 /**
                  * Or pass class directly without any configuration
                  */
-                image: {
-                    class: ImageTool,
-                    config: {
-                        endpoints: {
-                            byFile: 'http://localhost:8008/uploadFile', // Your backend file uploader endpoint
-                            byUrl: 'http://localhost:8008/fetchUrl', // Your endpoint that provides uploading by Url
-                        }
-                    }
-                },
+                image: SimpleImage,
                 list: {
                     class: List,
                     inlineToolbar: true,
