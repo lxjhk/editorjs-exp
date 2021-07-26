@@ -275,10 +275,11 @@
                 console.log('something changed', block);
             }
         });
-
-        
-        window.getEditorContent = function() {
-            if(scoop) {
+        scoop.ready((status) => {
+            console.log(status);
+        })
+        window.getEditorContent = function () {
+            if (scoop) {
                 editor.saver.save().then(data => {
                     scoop.getEditorContent(data);
                 })
