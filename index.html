@@ -29,6 +29,7 @@
    Read more at Tools Connection doc:
    https://editorjs.io/getting-started#tools-connection
    -->
+    <script src="assets//scoop.mini.app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
     <!-- Header -->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
@@ -276,7 +277,13 @@
         });
 
         
-        
+        window.getEditorContent = function() {
+            if(scoop) {
+                editor.saver.save().then(data => {
+                    scoop.getEditorContent(data);
+                })
+            }
+        }
     </script>
 </body>
 
