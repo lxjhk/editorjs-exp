@@ -10,21 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <style>
-        .ct--bottom {
-            display: none;
-        }
-
-        .ct--top {
-            display: none;
-        }
-
-        .ce-block.ce-block--focused .ce-block__content {
-            background: whitesmoke;
-        }
-
-        .ce-toolbar--opened {
-            display: none !important;
-        }
+       
     </style>
 </head>
 
@@ -51,6 +37,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
     <!-- Header -->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@latest"></script>
     <!-- Image -->
     <script src="https://cdn.jsdelivr.net/npm/@editorjs/delimiter@latest"></script>
     <!-- Delimiter -->
@@ -90,7 +77,7 @@
              * Enable/Disable the read only mode
              */
             readOnly: false,
-            autofocus: true,
+            
             /**
              * Wrapper of Editor
              */
@@ -124,7 +111,7 @@
                  * Or pass class directly without any configuration
                  */
                 image: SimpleImage,
-
+                ImageTool: ImageTool,
                 list: {
                     class: List,
                     inlineToolbar: true,
