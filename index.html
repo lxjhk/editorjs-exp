@@ -10,7 +10,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
     <style>
-       
+        .ce-toolbar .ce-toolbox,
+        .ce-toolbar__plus {
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            opacity: 1;
+            visibility: visible;
+        }
     </style>
 </head>
 
@@ -77,7 +84,7 @@
              * Enable/Disable the read only mode
              */
             readOnly: false,
-            
+
             /**
              * Wrapper of Editor
              */
